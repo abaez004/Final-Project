@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Solitaire</string>
+    <string name="action_settings">Settings</string>
+    <string name="solitaire">Solitaire</string>
+    <string name="settingsbtn">settingsBtn</string>
+    <string name="resetbtn">resetBtn</string>
+    <string name="quitbtn">quitBtn</string>
+    <string name="undobtn">undoBtn</string>
+    <string name="acepile4">acePile4</string>
+    <string name="acepile3">acePile3</string>
+    <string name="acepile2">acePile2</string>
+    <string name="acepile1">acePile1</string>
+    <string name="baseimg7">baseImg7</string>
+    <string name="baseimg6">baseImg6</string>
+    <string name="baseimg5">baseImg5</string>
+    <string name="baseimg4">baseImg4</string>
+    <string name="baseimg3">baseImg3</string>
+    <string name="baseimg2">baseImg2</string>
+    <string name="baseimg1">baseImg1</string>
+    <string name="drawpile">drawPile</string>
+    <string name="deckimg">deckImg</string>
+</resources>

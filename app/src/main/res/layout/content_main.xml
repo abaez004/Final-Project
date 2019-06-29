@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pokerbackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:contentDescription="@android:string/dialog_alert_title"
+        android:gravity="center_horizontal"
+        android:text="@string/solitaire"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        android:textStyle="normal"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintBottom_toTopOf="@+id/boardLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acePileLayout" />
+
+    <ImageView
+        android:id="@+id/deckImg"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/deckimg"
+        android:onClick="drawCards"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blank" />
+
+    <LinearLayout
+        android:id="@+id/deckLayout"
+        android:layout_width="88dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/drawPileImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/drawpile"
+            app:srcCompat="@drawable/empty" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/boardLayout"
+        android:layout_width="406dp"
+        android:layout_height="293dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/boardPile1"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/boardPile2"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/boardPile1"
+            android:layout_alignLeft="@+id/boardPile1"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/boardPile3"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/boardPile2"
+            android:layout_alignLeft="@+id/boardPile2"
+            android:layout_marginStart="59dp"
+            android:layout_marginLeft="59dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/boardPile4"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/boardPile3"
+            android:layout_alignLeft="@+id/boardPile3"
+            android:layout_marginStart="58dp"
+            android:layout_marginLeft="58dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/boardPile5"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/boardPile4"
+            android:layout_alignLeft="@+id/boardPile4"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/boardPile6"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/boardPile5"
+            android:layout_alignLeft="@+id/boardPile5"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/boardPile7"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/boardPile6"
+            android:layout_alignLeft="@+id/boardPile6"
+            android:layout_marginStart="58dp"
+            android:layout_marginLeft="58dp"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/acePileLayout"
+        android:layout_width="234dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/acePile1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/acepile1"
+            app:srcCompat="@drawable/empty" />
+
+        <ImageView
+            android:id="@+id/acePile2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/acePile1"
+            android:layout_toRightOf="@+id/acePile1"
+            android:contentDescription="@string/acepile2"
+            app:srcCompat="@drawable/empty" />
+
+        <ImageView
+            android:id="@+id/acePile3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_toEndOf="@+id/acePile2"
+            android:layout_toRightOf="@+id/acePile2"
+            android:contentDescription="@string/acepile3"
+            app:srcCompat="@drawable/empty" />
+
+        <ImageView
+            android:id="@+id/acePile4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toEndOf="@+id/acePile3"
+            android:layout_toRightOf="@+id/acePile3"
+            android:contentDescription="@string/acepile4"
+            app:srcCompat="@drawable/empty" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/leftBtns"
+        android:layout_width="100dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/undoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/undobtn"
+            android:onClick="undoClicked"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/undobtnunselect" />
+
+        <ImageView
+            android:id="@+id/quitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/quitbtn"
+            android:onClick="quitClicked"
+            app:srcCompat="@drawable/quitbtn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightBtns"
+        android:layout_width="100dp"
+        android:layout_height="112dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/resetBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/resetbtn"
+            android:onClick="resetClicked"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/resetbtn" />
+
+        <ImageView
+            android:id="@+id/settingsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/settingsbtn"
+            app:srcCompat="@drawable/settingsbtn" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
